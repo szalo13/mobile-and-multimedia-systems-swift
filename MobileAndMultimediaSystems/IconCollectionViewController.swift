@@ -60,6 +60,9 @@ class IconCollectionViewController: UICollectionViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+
+        
         if segue.identifier == "showIconDetail" {
             if let indexPaths = collectionView?.indexPathsForSelectedItems {
                 let destinationController = segue.destination as!
@@ -67,6 +70,11 @@ class IconCollectionViewController: UICollectionViewController {
                 
                 destinationController.icon = iconSet[indexPaths[0].row]
                 collectionView?.deselectItem(at: indexPaths[0], animated: false)
+                
+                // Bar customization
+                let backItem = UIBarButtonItem()
+                backItem.title = "Wróć"
+                destinationController.title = "Grid"
             }
         }
     }
