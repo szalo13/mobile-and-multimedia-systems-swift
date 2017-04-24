@@ -27,13 +27,8 @@ class IconCollectionViewController: UICollectionViewController {
     ]
     
     override func viewDidLoad() {
+        print("Elo")
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,17 +36,6 @@ class IconCollectionViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // return numbers of sections
@@ -73,5 +57,17 @@ class IconCollectionViewController: UICollectionViewController {
         cell.iconPriceLabel.text = "$\(icon.price)"
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showIconDetail" {
+            if let indexPaths = collectionView?.indexPathsForSelectedItems {
+                let destinationController = segue.destination as!
+                IconDetailViewController
+                
+                destinationController.icon = iconSet[indexPaths[0].row]
+                collectionView?.deselectItem(at: indexPaths[0], animated: false)
+            }
+        }
     }
 }

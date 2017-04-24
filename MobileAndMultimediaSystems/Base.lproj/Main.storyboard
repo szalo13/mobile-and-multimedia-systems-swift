@@ -14,7 +14,7 @@
             <objects>
                 <collectionViewController id="sqS-ho-XBv" customClass="IconCollectionViewController" customModule="MobileAndMultimediaSystems" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="isu-tf-uah">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L9k-it-Bvk">
@@ -59,6 +59,7 @@
                                 <connections>
                                     <outlet property="iconImageView" destination="Cw8-8L-Gh3" id="T8E-Ob-JlT"/>
                                     <outlet property="iconPriceLabel" destination="hUl-cX-M3e" id="nfq-MT-p3E"/>
+                                    <segue destination="nWc-gQ-G1a" kind="presentation" identifier="showIconDetail" id="Vr0-Rr-e0c"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -67,10 +68,46 @@
                             <outlet property="delegate" destination="sqS-ho-XBv" id="iPW-Xn-kcS"/>
                         </connections>
                     </collectionView>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MMK-Lk-h7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="85.599999999999994" y="-125.4872563718141"/>
+        </scene>
+        <!--Icon Detail View Controller-->
+        <scene sceneID="hAx-wZ-9ba">
+            <objects>
+                <viewController id="nWc-gQ-G1a" customClass="IconDetailViewController" customModule="MobileAndMultimediaSystems" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DOM-3o-zez"/>
+                        <viewControllerLayoutGuide type="bottom" id="Aix-Sp-P1Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HgD-TH-aoG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="79e-LI-j1c">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="dDA-0V-nJ9"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="79e-LI-j1c" firstAttribute="leading" secondItem="HgD-TH-aoG" secondAttribute="leading" id="DSa-xF-3vC"/>
+                            <constraint firstAttribute="trailing" secondItem="79e-LI-j1c" secondAttribute="trailing" id="GCE-ra-hwf"/>
+                            <constraint firstItem="79e-LI-j1c" firstAttribute="top" secondItem="HgD-TH-aoG" secondAttribute="top" id="Roj-0Y-o19"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="iconImageView" destination="79e-LI-j1c" id="1Qf-4N-nBo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CCv-Xm-Ut4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="777" y="-125"/>
         </scene>
     </scenes>
 </document>

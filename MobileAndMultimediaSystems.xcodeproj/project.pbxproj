@@ -16,6 +16,7 @@
 		4F87704F1EAE5218003FF8FD /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F87704E1EAE5218003FF8FD /* IconCollectionViewCell.swift */; };
 		4F8770511EAE552B003FF8FD /* IconCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8770501EAE552B003FF8FD /* IconCollectionViewController.swift */; };
 		4F8770531EAE5657003FF8FD /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8770521EAE5657003FF8FD /* Icon.swift */; };
+		4F8770551EAE61E1003FF8FD /* IconDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8770541EAE61E1003FF8FD /* IconDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		4F87704E1EAE5218003FF8FD /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconCollectionViewCell.swift; sourceTree = "<group>"; };
 		4F8770501EAE552B003FF8FD /* IconCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconCollectionViewController.swift; sourceTree = "<group>"; };
 		4F8770521EAE5657003FF8FD /* Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		4F8770541EAE61E1003FF8FD /* IconDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				4F87704E1EAE5218003FF8FD /* IconCollectionViewCell.swift */,
 				4F8770501EAE552B003FF8FD /* IconCollectionViewController.swift */,
 				4F8770521EAE5657003FF8FD /* Icon.swift */,
+				4F8770541EAE61E1003FF8FD /* IconDetailViewController.swift */,
 			);
 			path = MobileAndMultimediaSystems;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				4F784E471EA786670089F1AD /* AppDelegate.swift in Sources */,
 				4F8770511EAE552B003FF8FD /* IconCollectionViewController.swift in Sources */,
 				4F8770531EAE5657003FF8FD /* Icon.swift in Sources */,
+				4F8770551EAE61E1003FF8FD /* IconDetailViewController.swift in Sources */,
 				4F87704F1EAE5218003FF8FD /* IconCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

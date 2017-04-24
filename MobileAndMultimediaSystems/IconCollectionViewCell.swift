@@ -13,5 +13,4 @@ class IconCollectionViewCell: UICollectionViewCell {
     @IBOutlet var iconImageView: UIImageView!
     @IBOutlet var iconPriceLabel: UILabel!
     
-    
 }
