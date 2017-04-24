@@ -23,11 +23,19 @@ class IconCollectionViewController: UICollectionViewController {
     Icon(name: "pumkin", price: 0.99, isFeatured: true),
     Icon(name: "rip", price: 7.99, isFeatured: true),
     Icon(name: "skull", price: 8.99, isFeatured: true),
-    Icon(name: "sky", price: 0.99, isFeatured: true)
+    Icon(name: "sky", price: 0.99, isFeatured: true),
+    Icon(name: "toxic", price: 2.99, isFeatured: false),
+    Icon(name: "ic_book", price: 2.99, isFeatured: false),
+    Icon(name: "ic_backpack", price: 3.99, isFeatured: false),
+    Icon(name: "ic_camera", price: 4.99, isFeatured: false),
+    Icon(name: "ic_coffee", price: 3.99, isFeatured: false),
+    Icon(name: "ic_glasses", price: 3.99, isFeatured: false),
+    Icon(name: "ic_ice_cream", price: 4.99, isFeatured: false),
+    Icon(name: "ic_smoking_pipe", price: 6.99, isFeatured: false),
+    Icon(name: "ic_vespa", price: 9.99, isFeatured: true)
     ]
     
     override func viewDidLoad() {
-        print("Elo")
         super.viewDidLoad()
     }
 
