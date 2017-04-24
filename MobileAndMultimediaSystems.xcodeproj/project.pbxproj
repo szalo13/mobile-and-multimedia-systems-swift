@@ -15,6 +15,7 @@
 		4F784E671EA786670089F1AD /* MobileAndMultimediaSystemsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F784E661EA786670089F1AD /* MobileAndMultimediaSystemsUITests.swift */; };
 		4F87704F1EAE5218003FF8FD /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F87704E1EAE5218003FF8FD /* IconCollectionViewCell.swift */; };
 		4F8770511EAE552B003FF8FD /* IconCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8770501EAE552B003FF8FD /* IconCollectionViewController.swift */; };
+		4F8770531EAE5657003FF8FD /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8770521EAE5657003FF8FD /* Icon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		4F784E681EA786670089F1AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F87704E1EAE5218003FF8FD /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconCollectionViewCell.swift; sourceTree = "<group>"; };
 		4F8770501EAE552B003FF8FD /* IconCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconCollectionViewController.swift; sourceTree = "<group>"; };
+		4F8770521EAE5657003FF8FD /* Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				4F784E521EA786670089F1AD /* Info.plist */,
 				4F87704E1EAE5218003FF8FD /* IconCollectionViewCell.swift */,
 				4F8770501EAE552B003FF8FD /* IconCollectionViewController.swift */,
+				4F8770521EAE5657003FF8FD /* Icon.swift */,
 			);
 			path = MobileAndMultimediaSystems;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				4F784E471EA786670089F1AD /* AppDelegate.swift in Sources */,
 				4F8770511EAE552B003FF8FD /* IconCollectionViewController.swift in Sources */,
+				4F8770531EAE5657003FF8FD /* Icon.swift in Sources */,
 				4F87704F1EAE5218003FF8FD /* IconCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

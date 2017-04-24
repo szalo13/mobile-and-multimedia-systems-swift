@@ -11,7 +11,21 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class IconCollectionViewController: UICollectionViewController {
-
+    
+    private var iconSet: [Icon] =
+    [
+    Icon(name: "cat", price: 2.99, isFeatured: false),
+    Icon(name: "dribbble", price: 1.99, isFeatured: false),
+    Icon(name: "ghost", price: 4.99, isFeatured: false),
+    Icon(name: "hat", price: 2.99, isFeatured: false),
+    Icon(name: "owl", price: 5.99, isFeatured: false),
+    Icon(name: "pot", price: 1.99, isFeatured: false),
+    Icon(name: "pumkin", price: 0.99, isFeatured: true),
+    Icon(name: "rip", price: 7.99, isFeatured: true),
+    Icon(name: "skull", price: 8.99, isFeatured: true),
+    Icon(name: "sky", price: 0.99, isFeatured: true)
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
