@@ -14,13 +14,14 @@ var songAlreadyPlaying: String = ""
 
 class MusicPlayerViewController: UIViewController {
 
-    var songToPlay: String = ""
+    var songToPlay: Song = Song(fileName: "", artist: "", title: "", artwork: nil)
     var timer: Timer!
     var updateTimeAllowed: Bool = true
     
     @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var endLabel: UILabel!
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var albumImage: UIImageView!
     
     @IBAction func play(_ sender: Any) {
         audioPlayer.play()
@@ -61,9 +62,10 @@ class MusicPlayerViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
         
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: songToPlay, ofType: "mp3")!))
+            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: songToPlay.fileName, ofType: "mp3")!))
             audioPlayer.prepareToPlay()
             audioPlayer.play()
+            albumImage.image = UIImage(data: songToPlay.artwork!)
             slider.maximumValue = Float(audioPlayer.duration)
             
         } catch {

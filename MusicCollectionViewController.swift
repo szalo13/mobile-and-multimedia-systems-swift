@@ -102,7 +102,7 @@ class MusicCollectionViewController: UICollectionViewController {
                 let destinationController = segue.destination as!
                 MusicPlayerViewController
                 
-                destinationController.songToPlay = songs[indexPaths[0].row].fileName
+                destinationController.songToPlay = songs[indexPaths[0].row]
                 
                 collectionView?.deselectItem(at: indexPaths[0], animated: false)
                 
