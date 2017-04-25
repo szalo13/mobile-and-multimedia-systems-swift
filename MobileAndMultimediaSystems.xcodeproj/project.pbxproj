@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F154F641EAF9455009E32F3 /* 02 Broken Brights.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F154F621EAF9455009E32F3 /* 02 Broken Brights.mp3 */; };
+		4F154F651EAF9455009E32F3 /* james blunt You’re Beautiful.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F154F631EAF9455009E32F3 /* james blunt You’re Beautiful.mp3 */; };
+		4F154F671EAF9556009E32F3 /* MusicCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F154F661EAF9556009E32F3 /* MusicCollectionViewController.swift */; };
+		4F154F691EAF95C3009E32F3 /* MusicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F154F681EAF95C3009E32F3 /* MusicCollectionViewCell.swift */; };
 		4F2F64EA1EAF40C000680758 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F64E91EAF40C000680758 /* MusicPlayerViewController.swift */; };
 		4F784E471EA786670089F1AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F784E461EA786670089F1AD /* AppDelegate.swift */; };
 		4F784E4C1EA786670089F1AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F784E4A1EA786670089F1AD /* Main.storyboard */; };
@@ -39,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F154F621EAF9455009E32F3 /* 02 Broken Brights.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "02 Broken Brights.mp3"; sourceTree = "<group>"; };
+		4F154F631EAF9455009E32F3 /* james blunt You’re Beautiful.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "james blunt You’re Beautiful.mp3"; sourceTree = "<group>"; };
+		4F154F661EAF9556009E32F3 /* MusicCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MusicCollectionViewController.swift; path = ../MusicCollectionViewController.swift; sourceTree = "<group>"; };
+		4F154F681EAF95C3009E32F3 /* MusicCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MusicCollectionViewCell.swift; path = ../MusicCollectionViewCell.swift; sourceTree = "<group>"; };
 		4F2F64E91EAF40C000680758 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		4F784E431EA786670089F1AD /* MobileAndMultimediaSystems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAndMultimediaSystems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F784E461EA786670089F1AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +95,8 @@
 		4F2F64EB1EAF418800680758 /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				4F154F621EAF9455009E32F3 /* 02 Broken Brights.mp3 */,
+				4F154F631EAF9455009E32F3 /* james blunt You’re Beautiful.mp3 */,
 				4F8B8A191EAF424100EBEF15 /* sample1.mp3 */,
 			);
 			name = Music;
@@ -115,6 +125,8 @@
 		4F784E451EA786670089F1AD /* MobileAndMultimediaSystems */ = {
 			isa = PBXGroup;
 			children = (
+				4F154F681EAF95C3009E32F3 /* MusicCollectionViewCell.swift */,
+				4F154F661EAF9556009E32F3 /* MusicCollectionViewController.swift */,
 				4F2F64EB1EAF418800680758 /* Music */,
 				4F784E461EA786670089F1AD /* AppDelegate.swift */,
 				4F784E4A1EA786670089F1AD /* Main.storyboard */,
@@ -258,8 +270,10 @@
 			files = (
 				4F8B8A1A1EAF424100EBEF15 /* sample1.mp3 in Resources */,
 				4F784E511EA786670089F1AD /* LaunchScreen.storyboard in Resources */,
+				4F154F651EAF9455009E32F3 /* james blunt You’re Beautiful.mp3 in Resources */,
 				4F784E4E1EA786670089F1AD /* Assets.xcassets in Resources */,
 				4F784E4C1EA786670089F1AD /* Main.storyboard in Resources */,
+				4F154F641EAF9455009E32F3 /* 02 Broken Brights.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,9 +298,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F154F691EAF95C3009E32F3 /* MusicCollectionViewCell.swift in Sources */,
 				4F784E471EA786670089F1AD /* AppDelegate.swift in Sources */,
 				4F2F64EA1EAF40C000680758 /* MusicPlayerViewController.swift in Sources */,
 				4F8770511EAE552B003FF8FD /* IconCollectionViewController.swift in Sources */,
+				4F154F671EAF9556009E32F3 /* MusicCollectionViewController.swift in Sources */,
 				4F8770531EAE5657003FF8FD /* Icon.swift in Sources */,
 				4F8770551EAE61E1003FF8FD /* IconDetailViewController.swift in Sources */,
 				4F87704F1EAE5218003FF8FD /* IconCollectionViewCell.swift in Sources */,
