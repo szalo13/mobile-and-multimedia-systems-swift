@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import AVFoundation
 
 private let reuseIdentifier = "Cell"
 
 class MusicCollectionViewController: UICollectionViewController {
 
-    var songs:[String] = []
+    var songs:[Song] = []
     
     
     override func viewDidLoad() {
@@ -41,7 +42,7 @@ class MusicCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MusicCollectionViewCell
     
         // Configure the cell
-        cell.titleLabel.text = songs[indexPath.row]
+        cell.titleLabel.text = songs[indexPath.row].fileName
         
         return cell
     }
@@ -61,12 +62,35 @@ class MusicCollectionViewController: UICollectionViewController {
                     mySong = findString[findString.count-1]
                     mySong = mySong.replacingOccurrences(of: ".mp3", with: "")
                     mySong = mySong.removingPercentEncoding!
-                    songs.append(mySong)
+                    songs.append(getSong(songName: mySong))
                 }
             }
         } catch {
             
         }
+    }
+    
+    
+    func getSong(songName: String)-> Song {
+        let url = URL.init(fileURLWithPath: Bundle.main.path(forResource: songName, ofType: "mp3")!)
+        var song: Song = Song(fileName: songName, artist: "",title: "", artwork: "")
+        let playerItem = AVPlayerItem(url: url)
+        let metadataList = playerItem.asset.metadata
+        
+        for item in metadataList {
+            if item.commonKey != nil && item.stringValue != nil {
+                if item.commonKey == "title" {
+                    song.title = item.stringValue!
+                }
+                if item.commonKey == "artist" {
+                    song.artist = item.stringValue!
+                }
+                if item.commonKey == "artwork" {
+                    song.artwork = item.stringValue!
+                }
+            }
+        }
+        return song
     }
     
     
@@ -76,7 +100,7 @@ class MusicCollectionViewController: UICollectionViewController {
                 let destinationController = segue.destination as!
                 MusicPlayerViewController
                 
-                destinationController.songToPlay = songs[indexPaths[0].row]
+                destinationController.songToPlay = songs[indexPaths[0].row].fileName
                 
                 collectionView?.deselectItem(at: indexPaths[0], animated: false)
                 
