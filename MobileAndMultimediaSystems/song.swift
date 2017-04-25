@@ -7,17 +7,3 @@
 //
 
 import Foundation
-
-struct Song {
-    var fileName: String = ""
-    var artist: String = ""
-    var title: String = ""
-    var artwork: String = ""
-    
-    init(fileName: String, artist: String, title: String, artwork: String){
-        self.fileName = fileName
-        self.artist = artist
-        self.title = title
-        self.artwork = artwork
-    }
-}
