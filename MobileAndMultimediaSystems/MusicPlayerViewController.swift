@@ -9,10 +9,12 @@
 import UIKit
 import AVFoundation
 
+var audioPlayer = AVAudioPlayer()
+var songAlreadyPlaying: String = ""
+
 class MusicPlayerViewController: UIViewController {
 
-    var audioPlayer = AVAudioPlayer()
-    var song: String = ""
+    var songToPlay: String = ""
     var timer: Timer!
     var updateTimeAllowed: Bool = true
     
@@ -21,7 +23,6 @@ class MusicPlayerViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     
     @IBAction func play(_ sender: Any) {
-        print("play")
         audioPlayer.play()
     }
     
@@ -60,9 +61,9 @@ class MusicPlayerViewController: UIViewController {
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
         
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: song, ofType: "mp3")!))
+            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: songToPlay, ofType: "mp3")!))
             audioPlayer.prepareToPlay()
-            
+            audioPlayer.play()
             slider.maximumValue = Float(audioPlayer.duration)
             
         } catch {

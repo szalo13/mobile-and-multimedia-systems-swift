@@ -44,7 +44,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="MP3 Player"/>
                                         <connections>
-                                            <segue destination="bCh-7D-yMB" kind="show" id="sk2-6e-n1C"/>
+                                            <segue destination="bCh-7D-yMB" kind="show" identifier="" id="sk2-6e-n1C"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -67,7 +67,7 @@
         <scene sceneID="6cG-3z-G49">
             <objects>
                 <collectionViewController id="bCh-7D-yMB" customClass="MusicCollectionViewController" customModule="MobileAndMultimediaSystems" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="HTp-za-KLj">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="HTp-za-KLj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -113,7 +113,7 @@
                                 <connections>
                                     <outlet property="albumImage" destination="jLu-5w-JHy" id="bow-TU-dYQ"/>
                                     <outlet property="titleLabel" destination="sAN-os-cwA" id="jkR-EW-mYe"/>
-                                    <segue destination="csQ-xB-fbn" kind="show" id="cFS-LO-DoA"/>
+                                    <segue destination="csQ-xB-fbn" kind="show" identifier="showMusicPlayer" id="ukU-Ln-9OB"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
