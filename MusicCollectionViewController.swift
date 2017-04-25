@@ -44,6 +44,8 @@ class MusicCollectionViewController: UICollectionViewController {
         // Configure the cell
         cell.titleLabel.text = songs[indexPath.row].fileName
         
+        cell.albumImage.image = UIImage(data: songs[indexPath.row].artwork!)
+        
         return cell
     }
 
@@ -73,20 +75,20 @@ class MusicCollectionViewController: UICollectionViewController {
     
     func getSong(songName: String)-> Song {
         let url = URL.init(fileURLWithPath: Bundle.main.path(forResource: songName, ofType: "mp3")!)
-        var song: Song = Song(fileName: songName, artist: "",title: "", artwork: "")
+        var song: Song = Song(fileName: songName, artist: "",title: "", artwork: nil)
         let playerItem = AVPlayerItem(url: url)
         let metadataList = playerItem.asset.metadata
         
         for item in metadataList {
-            if item.commonKey != nil && item.stringValue != nil {
-                if item.commonKey == "title" {
+            if item.commonKey != nil {
+                if item.commonKey == "title" && item.stringValue != nil {
                     song.title = item.stringValue!
                 }
-                if item.commonKey == "artist" {
+                if item.commonKey == "artist" && item.stringValue != nil {
                     song.artist = item.stringValue!
                 }
-                if item.commonKey == "artwork" {
-                    song.artwork = item.stringValue!
+                if item.commonKey == "artwork" && item.dataValue != nil {
+                    song.artwork = item.dataValue!
                 }
             }
         }

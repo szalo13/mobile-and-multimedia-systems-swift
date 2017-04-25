@@ -12,9 +12,9 @@ struct Song {
     var fileName: String = ""
     var artist: String = ""
     var title: String = ""
-    var artwork: String = ""
+    var artwork: Data? = nil
     
-    init(fileName: String, artist: String, title: String, artwork: String){
+    init(fileName: String, artist: String, title: String, artwork: Data?){
         self.fileName = fileName
         self.artist = artist
         self.title = title
