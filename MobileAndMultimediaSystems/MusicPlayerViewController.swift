@@ -13,6 +13,7 @@ class MusicPlayerViewController: UIViewController {
 
     var audioPlayer = AVAudioPlayer()
     var timer: Timer!
+    var updateTimeAllowed: Bool = true
     
     @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var endLabel: UILabel!
@@ -42,6 +43,15 @@ class MusicPlayerViewController: UIViewController {
         }
     }
     
+    @IBAction func changeTime(_ sender: Any) {
+        audioPlayer.currentTime = TimeInterval(slider.value)
+        updateTimeAllowed = true
+    }
+    
+    @IBAction func stopTimeUpdate(_ sender: Any) {
+        updateTimeAllowed = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,9 +76,12 @@ class MusicPlayerViewController: UIViewController {
     }
     
      func updateTime() {
-        slider.value = Float(audioPlayer.currentTime)
-        endLabel.text = String(audioPlayer.currentTime)
-        startLabel.text = String(Float(audioPlayer.currentTime))
+        if (audioPlayer.isPlaying && updateTimeAllowed) {
+            slider.value = Float(audioPlayer.currentTime)
+            endLabel.text = String(audioPlayer.currentTime)
+        } else {
+            
+        }
     }
 
 }

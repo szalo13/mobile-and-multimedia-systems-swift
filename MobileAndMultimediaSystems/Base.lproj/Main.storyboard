@@ -75,26 +75,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="T9S-RQ-lb5">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="T9S-RQ-lb5">
                                 <rect key="frame" x="26" y="264" width="323" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udr-qL-Y7Y">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="107.5" height="50"/>
                                         <state key="normal" title="Play"/>
                                         <connections>
                                             <action selector="play:" destination="csQ-xB-fbn" eventType="touchUpInside" id="87h-Vv-55w"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huG-Jn-UEr">
-                                        <rect key="frame" x="139.5" y="0.0" width="42" height="50"/>
+                                        <rect key="frame" x="107.5" y="0.0" width="108" height="50"/>
                                         <state key="normal" title="Pause"/>
                                         <connections>
                                             <action selector="pause:" destination="csQ-xB-fbn" eventType="touchUpInside" id="1ts-PQ-v1c"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjN-So-7UC">
-                                        <rect key="frame" x="291" y="0.0" width="32" height="50"/>
-                                        <state key="normal" title="Stop"/>
+                                        <rect key="frame" x="215.5" y="0.0" width="107.5" height="50"/>
+                                        <state key="normal" title="Restart"/>
                                         <connections>
                                             <action selector="restart:" destination="csQ-xB-fbn" eventType="touchUpInside" id="T26-Zm-rkq"/>
                                         </connections>
@@ -106,8 +106,12 @@
                             </stackView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1es-Cr-Yau">
                                 <rect key="frame" x="29" y="234" width="317" height="31"/>
+                                <connections>
+                                    <action selector="changeTime:" destination="csQ-xB-fbn" eventType="touchUpInside" id="zD3-6w-fbA"/>
+                                    <action selector="stopTimeUpdate:" destination="csQ-xB-fbn" eventType="touchDown" id="Etx-Lu-f5h"/>
+                                </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJm-Xu-SVa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJm-Xu-SVa">
                                 <rect key="frame" x="31" y="204" width="80" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="iQC-zh-J1v"/>
@@ -116,7 +120,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Krd-O9-tIc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Krd-O9-tIc">
                                 <rect key="frame" x="264" y="204" width="80" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="clT-RF-Npo"/>
