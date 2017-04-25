@@ -41,10 +41,14 @@ class MusicCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MusicCollectionViewCell
     
-        // Configure the cell
+        // Configure the cell - title and image
         cell.titleLabel.text = songs[indexPath.row].fileName
         
-        cell.albumImage.image = UIImage(data: songs[indexPath.row].artwork!)
+        if songs[indexPath.row].artwork != nil {
+            cell.albumImage.image = UIImage(data: songs[indexPath.row].artwork!)
+        } else {
+            // no artwork
+        }
         
         return cell
     }

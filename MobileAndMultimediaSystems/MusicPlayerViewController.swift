@@ -65,7 +65,12 @@ class MusicPlayerViewController: UIViewController {
             audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: songToPlay.fileName, ofType: "mp3")!))
             audioPlayer.prepareToPlay()
             audioPlayer.play()
-            albumImage.image = UIImage(data: songToPlay.artwork!)
+            
+            if songToPlay.artwork != nil {
+                albumImage.image = UIImage(data: songToPlay.artwork!)
+            } else {
+                // no artwork
+            }
             slider.maximumValue = Float(audioPlayer.duration)
             
         } catch {

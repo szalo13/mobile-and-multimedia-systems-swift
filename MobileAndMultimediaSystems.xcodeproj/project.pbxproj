@@ -24,6 +24,7 @@
 		4F8770531EAE5657003FF8FD /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8770521EAE5657003FF8FD /* Icon.swift */; };
 		4F8770551EAE61E1003FF8FD /* IconDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8770541EAE61E1003FF8FD /* IconDetailViewController.swift */; };
 		4F8B8A1A1EAF424100EBEF15 /* sample1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F8B8A191EAF424100EBEF15 /* sample1.mp3 */; };
+		4FE78C541EAFF8F90021D068 /* 03 - Between The Lines (feat. Bajka).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FE78C531EAFF8F90021D068 /* 03 - Between The Lines (feat. Bajka).mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		4F8770521EAE5657003FF8FD /* Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		4F8770541EAE61E1003FF8FD /* IconDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconDetailViewController.swift; sourceTree = "<group>"; };
 		4F8B8A191EAF424100EBEF15 /* sample1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample1.mp3; sourceTree = "<group>"; };
+		4FE78C531EAFF8F90021D068 /* 03 - Between The Lines (feat. Bajka).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "03 - Between The Lines (feat. Bajka).mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 		4F2F64EB1EAF418800680758 /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				4FE78C531EAFF8F90021D068 /* 03 - Between The Lines (feat. Bajka).mp3 */,
 				4F154F621EAF9455009E32F3 /* 02 Broken Brights.mp3 */,
 				4F154F631EAF9455009E32F3 /* james blunt You’re Beautiful.mp3 */,
 				4F8B8A191EAF424100EBEF15 /* sample1.mp3 */,
@@ -291,6 +294,7 @@
 				4F784E511EA786670089F1AD /* LaunchScreen.storyboard in Resources */,
 				4F154F651EAF9455009E32F3 /* james blunt You’re Beautiful.mp3 in Resources */,
 				4F784E4E1EA786670089F1AD /* Assets.xcassets in Resources */,
+				4FE78C541EAFF8F90021D068 /* 03 - Between The Lines (feat. Bajka).mp3 in Resources */,
 				4F784E4C1EA786670089F1AD /* Main.storyboard in Resources */,
 				4F154F641EAF9455009E32F3 /* 02 Broken Brights.mp3 in Resources */,
 			);
