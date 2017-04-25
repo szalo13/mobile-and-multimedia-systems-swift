@@ -92,6 +92,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F154F6A1EAF9F21009E32F3 /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				4F87704E1EAE5218003FF8FD /* IconCollectionViewCell.swift */,
+				4F8770501EAE552B003FF8FD /* IconCollectionViewController.swift */,
+				4F8770521EAE5657003FF8FD /* Icon.swift */,
+				4F8770541EAE61E1003FF8FD /* IconDetailViewController.swift */,
+			);
+			name = Grid;
+			sourceTree = "<group>";
+		};
+		4F154F6B1EAF9F30009E32F3 /* MP3 Player */ = {
+			isa = PBXGroup;
+			children = (
+				4F154F681EAF95C3009E32F3 /* MusicCollectionViewCell.swift */,
+				4F154F661EAF9556009E32F3 /* MusicCollectionViewController.swift */,
+				4F2F64EB1EAF418800680758 /* Music */,
+				4F2F64E91EAF40C000680758 /* MusicPlayerViewController.swift */,
+			);
+			name = "MP3 Player";
+			sourceTree = "<group>";
+		};
 		4F2F64EB1EAF418800680758 /* Music */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,19 +147,13 @@
 		4F784E451EA786670089F1AD /* MobileAndMultimediaSystems */ = {
 			isa = PBXGroup;
 			children = (
-				4F154F681EAF95C3009E32F3 /* MusicCollectionViewCell.swift */,
-				4F154F661EAF9556009E32F3 /* MusicCollectionViewController.swift */,
-				4F2F64EB1EAF418800680758 /* Music */,
+				4F154F6B1EAF9F30009E32F3 /* MP3 Player */,
 				4F784E461EA786670089F1AD /* AppDelegate.swift */,
 				4F784E4A1EA786670089F1AD /* Main.storyboard */,
-				4F2F64E91EAF40C000680758 /* MusicPlayerViewController.swift */,
 				4F784E4D1EA786670089F1AD /* Assets.xcassets */,
 				4F784E4F1EA786670089F1AD /* LaunchScreen.storyboard */,
 				4F784E521EA786670089F1AD /* Info.plist */,
-				4F87704E1EAE5218003FF8FD /* IconCollectionViewCell.swift */,
-				4F8770501EAE552B003FF8FD /* IconCollectionViewController.swift */,
-				4F8770521EAE5657003FF8FD /* Icon.swift */,
-				4F8770541EAE61E1003FF8FD /* IconDetailViewController.swift */,
+				4F154F6A1EAF9F21009E32F3 /* Grid */,
 			);
 			path = MobileAndMultimediaSystems;
 			sourceTree = "<group>";
