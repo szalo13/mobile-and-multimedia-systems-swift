@@ -106,10 +106,10 @@
 		4F154F6B1EAF9F30009E32F3 /* MP3 Player */ = {
 			isa = PBXGroup;
 			children = (
-				4F154F681EAF95C3009E32F3 /* MusicCollectionViewCell.swift */,
 				4F154F661EAF9556009E32F3 /* MusicCollectionViewController.swift */,
-				4F2F64EB1EAF418800680758 /* Music */,
 				4F2F64E91EAF40C000680758 /* MusicPlayerViewController.swift */,
+				4F2F64EB1EAF418800680758 /* Music */,
+				4F154F681EAF95C3009E32F3 /* MusicCollectionViewCell.swift */,
 			);
 			name = "MP3 Player";
 			sourceTree = "<group>";

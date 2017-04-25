@@ -39,22 +39,21 @@ class IconCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // return numbers of sections
         return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // return the numbers of items
         return iconSet.count;
     }
+    
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! IconCollectionViewCell
@@ -67,10 +66,8 @@ class IconCollectionViewController: UICollectionViewController {
         return cell
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-
-        
         if segue.identifier == "showIconDetail" {
             if let indexPaths = collectionView?.indexPathsForSelectedItems {
                 let destinationController = segue.destination as!

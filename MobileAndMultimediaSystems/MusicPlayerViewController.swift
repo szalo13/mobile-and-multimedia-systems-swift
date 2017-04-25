@@ -52,6 +52,7 @@ class MusicPlayerViewController: UIViewController {
         updateTimeAllowed = false
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,12 +71,13 @@ class MusicPlayerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-     func updateTime() {
+    
+    func updateTime() {
         if (audioPlayer.isPlaying && updateTimeAllowed) {
             slider.value = Float(audioPlayer.currentTime)
             endLabel.text = String(audioPlayer.currentTime)
