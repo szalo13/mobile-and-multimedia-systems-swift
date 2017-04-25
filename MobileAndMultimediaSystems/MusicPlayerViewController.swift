@@ -19,13 +19,22 @@ class MusicPlayerViewController: UIViewController {
     }
     
     @IBAction func pause(_ sender: Any) {
-        print("pause")
-        audioPlayer.pause()
+        if (audioPlayer.isPlaying){
+            audioPlayer.pause()
+        } else {
+            
+        }
     }
     
     @IBAction func restart(_ sender: Any) {
-        print("stop")
-        audioPlayer.stop()
+        if (audioPlayer.isPlaying){
+            audioPlayer.stop()
+            audioPlayer.currentTime = 0
+            audioPlayer.play()
+        } else {
+            audioPlayer.currentTime = 0
+            audioPlayer.play()
+        }
     }
     
     override func viewDidLoad() {
