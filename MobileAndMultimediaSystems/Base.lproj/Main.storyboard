@@ -142,6 +142,7 @@
                     </view>
                     <connections>
                         <outlet property="endLabel" destination="Krd-O9-tIc" id="PDf-RM-8jB"/>
+                        <outlet property="slider" destination="1es-Cr-Yau" id="dmX-sZ-hAM"/>
                         <outlet property="startLabel" destination="iJm-Xu-SVa" id="ybe-1l-DEv"/>
                     </connections>
                 </viewController>
