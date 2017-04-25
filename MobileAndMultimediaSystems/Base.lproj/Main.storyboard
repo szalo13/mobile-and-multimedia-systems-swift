@@ -111,6 +111,8 @@
                                     <constraint firstAttribute="trailing" secondItem="jLu-5w-JHy" secondAttribute="trailing" id="ucU-a4-mbV"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="albumImage" destination="jLu-5w-JHy" id="bow-TU-dYQ"/>
+                                    <outlet property="titleLabel" destination="sAN-os-cwA" id="jkR-EW-mYe"/>
                                     <segue destination="csQ-xB-fbn" kind="show" id="cFS-LO-DoA"/>
                                 </connections>
                             </collectionViewCell>

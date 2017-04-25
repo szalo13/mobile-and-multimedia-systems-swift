@@ -12,16 +12,12 @@ private let reuseIdentifier = "Cell"
 
 class MusicCollectionViewController: UICollectionViewController {
 
+    var songs:[String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+        gettingSongNames()
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,24 +38,44 @@ class MusicCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        return songs.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MusicCollectionViewCell
     
         // Configure the cell
-    
+        cell.titleLabel.text = songs[indexPath.row]
+        
         return cell
     }
 
+    func gettingSongNames() {
+        let folderURL = URL(fileURLWithPath: Bundle.main.resourcePath!)
+        
+        do {
+            let songPath = try FileManager.default.contentsOfDirectory(at: folderURL, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
+            
+            for song in songPath {
+                var mySong = song.absoluteString
+                
+                if mySong.contains(".mp3") {
+                    let findString = mySong.components(separatedBy: "/")
+                    mySong = findString[findString.count-1]
+                    mySong = mySong.replacingOccurrences(of: ".mp3", with: "")
+                    mySong = mySong.removingPercentEncoding!
+                    songs.append(mySong)
+                }
+            }
+        } catch {
+            
+        }
+    }
     // MARK: UICollectionViewDelegate
 
     /*
