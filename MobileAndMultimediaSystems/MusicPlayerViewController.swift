@@ -13,6 +13,9 @@ class MusicPlayerViewController: UIViewController {
 
     var audioPlayer = AVAudioPlayer()
     
+    @IBOutlet weak var startLabel: UILabel!
+    @IBOutlet weak var endLabel: UILabel!
+    
     @IBAction func play(_ sender: Any) {
         print("play")
         audioPlayer.play()
