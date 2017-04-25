@@ -68,4 +68,23 @@ class MusicCollectionViewController: UICollectionViewController {
             
         }
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMusicPlayer" {
+            if let indexPaths = collectionView?.indexPathsForSelectedItems {
+                let destinationController = segue.destination as!
+                MusicPlayerViewController
+                
+                destinationController.song = songs[indexPaths[0].row]
+                
+                collectionView?.deselectItem(at: indexPaths[0], animated: false)
+                
+                // Bar customization
+                let backItem = UIBarButtonItem()
+                backItem.title = "Wróć"
+                destinationController.title = "Grid"
+            }
+        }
+    }
 }
