@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="yre-dD-P9t">
-                                <rect key="frame" x="31" y="104" width="313" height="110"/>
+                                <rect key="frame" x="31" y="104" width="313" height="180"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o56-lK-ret">
                                         <rect key="frame" x="0.0" y="0.0" width="313" height="40"/>
@@ -47,6 +48,17 @@
                                             <segue destination="bCh-7D-yMB" kind="show" identifier="" id="sk2-6e-n1C"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDO-zc-dt4">
+                                        <rect key="frame" x="0.0" y="140" width="313" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="UT4-3H-Zfe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Video Player"/>
+                                        <connections>
+                                            <segue destination="qS8-Ub-95u" kind="show" id="uZp-OQ-qij"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -67,7 +79,7 @@
         <scene sceneID="6cG-3z-G49">
             <objects>
                 <collectionViewController id="bCh-7D-yMB" customClass="MusicCollectionViewController" customModule="MobileAndMultimediaSystems" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="HTp-za-KLj">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="HTp-za-KLj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -128,6 +140,59 @@
             </objects>
             <point key="canvasLocation" x="1964" y="636"/>
         </scene>
+        <!--Video Collection View Controller-->
+        <scene sceneID="CmB-jd-Lb6">
+            <objects>
+                <collectionViewController id="qS8-Ub-95u" customClass="VideoCollectionViewController" customModule="MobileAndMultimediaSystems" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="A9o-6U-1vl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="6iK-Ce-Asq">
+                            <size key="itemSize" width="360" height="250"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="nSH-KJ-UT9" customClass="VideoCollectionViewCell" customModule="MobileAndMultimediaSystems" customModuleProvider="target">
+                                <rect key="frame" x="14" y="0.0" width="347" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="347" height="250"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WjP-78-m1X">
+                                            <rect key="frame" x="0.0" y="0.0" width="347" height="250"/>
+                                            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="WjP-78-m1X" secondAttribute="height" multiplier="347:250" id="Tyf-OW-YOt"/>
+                                            </constraints>
+                                        </webView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="WjP-78-m1X" secondAttribute="trailing" id="2nf-CD-U0w"/>
+                                    <constraint firstItem="WjP-78-m1X" firstAttribute="top" secondItem="nSH-KJ-UT9" secondAttribute="top" id="a8l-kK-MVb"/>
+                                    <constraint firstItem="WjP-78-m1X" firstAttribute="leading" secondItem="nSH-KJ-UT9" secondAttribute="leading" id="iN5-3U-CXw"/>
+                                    <constraint firstItem="WjP-78-m1X" firstAttribute="centerX" secondItem="nSH-KJ-UT9" secondAttribute="centerX" id="ljF-Or-nLn"/>
+                                </constraints>
+                                <size key="customSize" width="347" height="250"/>
+                                <connections>
+                                    <outlet property="webView" destination="WjP-78-m1X" id="Hpj-sY-ZwM"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="qS8-Ub-95u" id="Gbw-4o-d1h"/>
+                            <outlet property="delegate" destination="qS8-Ub-95u" id="lIj-9O-jxA"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wEt-Ew-h5M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1964" y="1324.5877061469266"/>
+        </scene>
         <!--Music Player View Controller-->
         <scene sceneID="0gN-Cu-TWg">
             <objects>
@@ -161,7 +226,7 @@
                                 </constraints>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qq0-l9-HYM">
-                                <rect key="frame" x="87.5" y="104" width="200" height="200"/>
+                                <rect key="frame" x="88" y="104" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="rnH-lN-g7O"/>
                                     <constraint firstAttribute="height" constant="200" id="zB9-qA-vYd"/>
