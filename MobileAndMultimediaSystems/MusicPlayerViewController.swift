@@ -15,6 +15,8 @@ var songAlreadyPlaying: String = ""
 class MusicPlayerViewController: UIViewController {
 
     var songToPlay: Song = Song(fileName: "", artist: "", title: "", artwork: nil)
+    var songs: [Song] = []
+    var songToPlayIndex: Int = 0
     var timer: Timer!
     var updateTimeAllowed: Bool = true
     
@@ -55,27 +57,38 @@ class MusicPlayerViewController: UIViewController {
         updateTimeAllowed = false
     }
     
+    @IBAction func playNextSong() {
+        audioPlayer.stop()
+        songToPlayIndex = songToPlayIndex + 1
+        if (songToPlayIndex < songs.count) {
+            songToPlay = songs[songToPlayIndex]
+            playSong()
+        } else {
+            // is a last song
+            // TODO: Change picture to none
+            songToPlayIndex = songToPlayIndex - 1
+        }
+    }
+    
+    @IBAction func playPreviousSong(){
+        audioPlayer.stop()
+        songToPlayIndex = songToPlayIndex - 1
+        if (songToPlayIndex >= 0) {
+            songToPlay = songs[songToPlayIndex]
+            playSong()
+        } else {
+            // is first song
+            // TODO: Change picture to none
+            songToPlayIndex = songToPlayIndex + 1
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
         
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: songToPlay.fileName, ofType: "mp3")!))
-            audioPlayer.prepareToPlay()
-            audioPlayer.play()
-            
-            if songToPlay.artwork != nil {
-                albumImage.image = UIImage(data: songToPlay.artwork!)
-            } else {
-                // no artwork
-            }
-            slider.maximumValue = Float(audioPlayer.duration)
-            
-        } catch {
-            print(error)
-        }
+        playSong()
     }
 
     
@@ -90,6 +103,24 @@ class MusicPlayerViewController: UIViewController {
             endLabel.text = String(audioPlayer.currentTime)
         } else {
             
+        }
+    }
+    
+    func playSong() {
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource: songToPlay.fileName, ofType: "mp3")!))
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+            
+            if songToPlay.artwork != nil {
+                albumImage.image = UIImage(data: songToPlay.artwork!)
+            } else {
+                albumImage.image = UIImage(named: "rip")
+            }
+            slider.maximumValue = Float(audioPlayer.duration)
+            
+        } catch {
+            print(error)
         }
     }
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ukU-t8-3VE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ukU-t8-3VE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -271,15 +271,37 @@
                                     <constraint firstAttribute="height" constant="30" id="VYN-4c-2L2"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gtZ-id-8n8">
+                                <rect key="frame" x="26" y="454" width="323" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9u-UJ-8WK">
+                                        <rect key="frame" x="0.0" y="0.0" width="161.5" height="30"/>
+                                        <state key="normal" title="Previous"/>
+                                        <connections>
+                                            <action selector="playPreviousSong" destination="csQ-xB-fbn" eventType="touchUpInside" id="dI2-qF-I8X"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXv-m7-gn3">
+                                        <rect key="frame" x="161.5" y="0.0" width="161.5" height="30"/>
+                                        <state key="normal" title="Next"/>
+                                        <connections>
+                                            <action selector="playNextSong" destination="csQ-xB-fbn" eventType="touchUpInside" id="eG2-4g-fAK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="gGW-9v-VnB" secondAttribute="trailing" constant="10" id="2ci-An-PPy"/>
                             <constraint firstItem="qq0-l9-HYM" firstAttribute="centerX" secondItem="uDL-Zs-t00" secondAttribute="centerX" id="4vn-BG-ygP"/>
                             <constraint firstItem="1es-Cr-Yau" firstAttribute="leading" secondItem="uDL-Zs-t00" secondAttribute="leadingMargin" constant="15" id="9Ze-em-6nl"/>
+                            <constraint firstItem="gtZ-id-8n8" firstAttribute="leading" secondItem="uDL-Zs-t00" secondAttribute="leadingMargin" constant="10" id="Eeu-WM-Guy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="T9S-RQ-lb5" secondAttribute="trailing" constant="10" id="IrO-8R-vrd"/>
                             <constraint firstItem="T9S-RQ-lb5" firstAttribute="top" secondItem="1es-Cr-Yau" secondAttribute="bottom" constant="20" id="OC6-du-9Y6"/>
+                            <constraint firstItem="gtZ-id-8n8" firstAttribute="top" secondItem="T9S-RQ-lb5" secondAttribute="bottom" constant="20" id="Pg0-b1-ozi"/>
                             <constraint firstItem="qq0-l9-HYM" firstAttribute="top" secondItem="Xat-4N-68d" secondAttribute="bottom" constant="40" id="QdG-Yr-Wy4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gtZ-id-8n8" secondAttribute="trailing" constant="10" id="Quj-3u-x8z"/>
                             <constraint firstItem="gGW-9v-VnB" firstAttribute="top" secondItem="qq0-l9-HYM" secondAttribute="bottom" constant="20" id="SO0-GE-AfI"/>
                             <constraint firstItem="gGW-9v-VnB" firstAttribute="leading" secondItem="uDL-Zs-t00" secondAttribute="leadingMargin" constant="10" id="Yyv-2t-ctU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1es-Cr-Yau" secondAttribute="trailing" constant="15" id="dSr-si-byG"/>
