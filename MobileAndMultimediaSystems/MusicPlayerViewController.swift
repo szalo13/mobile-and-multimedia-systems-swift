@@ -100,7 +100,15 @@ class MusicPlayerViewController: UIViewController {
     func updateTime() {
         if (audioPlayer.isPlaying && updateTimeAllowed) {
             slider.value = Float(audioPlayer.currentTime)
-            endLabel.text = String(audioPlayer.currentTime)
+            
+            let seconds = Int(audioPlayer.currentTime) % 60
+            let minutes = Int(audioPlayer.currentTime) / 60 % 60
+            
+            if (seconds < 10) {
+                endLabel.text = String(minutes) + ":0" + String(seconds)
+            } else {
+                endLabel.text = String(minutes) + ":" + String(seconds)
+            }
         } else {
             
         }
