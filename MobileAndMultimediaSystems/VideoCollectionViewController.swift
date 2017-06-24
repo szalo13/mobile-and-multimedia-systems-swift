@@ -37,27 +37,27 @@ class VideoCollectionViewController: UICollectionViewController {
     }
     
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! VideoCollectionViewCell
-        
-        let youTubeURL = "https://www.youtube.com/embed/jG7dSXcfVqE"
-        let htmlString = "<iframe width=\"\(cell.webView.frame.width)\" height=\"\(cell.webView.frame.height)\" src=\"\(youTubeURL)?&playsinline=1\" frameborder=\"0\" allowfullscreen></iframe>"
-        
-        print(htmlString)
-        
-        cell.webView.allowsInlineMediaPlayback = true
-        cell.webView.loadHTMLString( htmlString, baseURL: nil)
-        // Configure the cell - title and image
-        //        cell.titleLabel.text = videos[indexPath.row].fileName
-        
-        //        if videos[indexPath.row].artwork != nil {
-        //            cell.albumImage.image = UIImage(data: songs[indexPath.row].artwork!)
-        //        } else {
-        //            // no artwork
-        //        }
-        
-        return cell
-    }
+//    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! VideoCollectionViewCell
+//        
+//        let youTubeURL = "https://www.youtube.com/embed/jG7dSXcfVqE"
+//        let htmlString = "<iframe width=\"\(cell.webView.frame.width)\" height=\"\(cell.webView.frame.height)\" src=\"\(youTubeURL)?&playsinline=1\" frameborder=\"0\" allowfullscreen></iframe>"
+//        
+//        print(htmlString)
+//        
+//        cell.webView.allowsInlineMediaPlayback = true
+//        cell.webView.loadHTMLString( htmlString, baseURL: nil)
+//        // Configure the cell - title and image
+//        //        cell.titleLabel.text = videos[indexPath.row].fileName
+//        
+//        //        if videos[indexPath.row].artwork != nil {
+//        //            cell.albumImage.image = UIImage(data: songs[indexPath.row].artwork!)
+//        //        } else {
+//        //            // no artwork
+//        //        }
+//        
+//        return cell
+//    }
     
     
     func gettingVideosNames() {

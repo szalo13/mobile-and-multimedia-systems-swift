@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VideoCollectionViewCell: UICollectionViewCell {
+class VideoListCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var webView: UIWebView!
     
