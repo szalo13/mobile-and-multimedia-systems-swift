@@ -98,25 +98,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mWe-fe-DhI">
-                                <rect key="frame" x="26" y="74" width="323" height="200"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mWe-fe-DhI" customClass="YouTubePlayerView" customModule="YouTubePlayer_Swift">
+                                <rect key="frame" x="16" y="64" width="343" height="220"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="ul8-rp-9Xx"/>
+                                    <constraint firstAttribute="height" constant="220" id="8QQ-Yn-JO9"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eFj-2X-Vim">
-                                <rect key="frame" x="26" y="344" width="323" height="30"/>
+                                <rect key="frame" x="16" y="334" width="343" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWv-rk-NjR">
-                                        <rect key="frame" x="0.0" y="0.0" width="161.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="30"/>
                                         <state key="normal" title="Previous"/>
                                         <connections>
                                             <action selector="playPreviousSong" destination="csQ-xB-fbn" eventType="touchUpInside" id="555-ut-WwN"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x56-aD-rWo">
-                                        <rect key="frame" x="161.5" y="0.0" width="161.5" height="30"/>
+                                        <rect key="frame" x="171.5" y="0.0" width="171.5" height="30"/>
                                         <state key="normal" title="Next"/>
                                         <connections>
                                             <action selector="playNextSong" destination="csQ-xB-fbn" eventType="touchUpInside" id="OJR-Cl-tdt"/>
@@ -125,24 +125,26 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="eP6-nk-gZK">
-                                <rect key="frame" x="26" y="294" width="323" height="30"/>
+                                <rect key="frame" x="16" y="294" width="343" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uma-2a-sar">
-                                        <rect key="frame" x="0.0" y="0.0" width="107.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="114.5" height="30"/>
                                         <state key="normal" title="Play"/>
                                         <connections>
+                                            <action selector="btnPlay:" destination="NFl-bu-Jjg" eventType="touchDown" id="Yzg-Hg-wf0"/>
                                             <action selector="play:" destination="csQ-xB-fbn" eventType="touchUpInside" id="Zbv-n2-q4o"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDv-1w-uWB">
-                                        <rect key="frame" x="107.5" y="0.0" width="108" height="30"/>
+                                        <rect key="frame" x="114.5" y="0.0" width="114" height="30"/>
                                         <state key="normal" title="Pause"/>
                                         <connections>
+                                            <action selector="btnPause:" destination="NFl-bu-Jjg" eventType="touchDown" id="ehG-2t-og1"/>
                                             <action selector="pause:" destination="csQ-xB-fbn" eventType="touchUpInside" id="c6D-N2-Ias"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W7E-kt-6NF">
-                                        <rect key="frame" x="215.5" y="0.0" width="107.5" height="30"/>
+                                        <rect key="frame" x="228.5" y="0.0" width="114.5" height="30"/>
                                         <state key="normal" title="Restart"/>
                                         <connections>
                                             <action selector="restart:" destination="csQ-xB-fbn" eventType="touchUpInside" id="oTs-iO-hyd"/>
@@ -156,17 +158,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="eP6-nk-gZK" firstAttribute="leading" secondItem="l2m-Mt-8UY" secondAttribute="leadingMargin" constant="10" id="4RX-UD-xEh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="eFj-2X-Vim" secondAttribute="trailing" constant="10" id="4wf-S5-5cl"/>
-                            <constraint firstItem="mWe-fe-DhI" firstAttribute="top" secondItem="dYb-Yq-S9a" secondAttribute="bottom" constant="10" id="8LM-k2-gaE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="mWe-fe-DhI" secondAttribute="trailing" constant="10" id="Syi-PT-o8E"/>
-                            <constraint firstItem="eP6-nk-gZK" firstAttribute="top" secondItem="mWe-fe-DhI" secondAttribute="bottom" constant="20" id="fLq-WY-NVo"/>
-                            <constraint firstItem="eFj-2X-Vim" firstAttribute="top" secondItem="eP6-nk-gZK" secondAttribute="bottom" constant="20" id="gPl-zv-SNe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="eP6-nk-gZK" secondAttribute="trailing" constant="10" id="jkU-L4-7oF"/>
-                            <constraint firstItem="eFj-2X-Vim" firstAttribute="leading" secondItem="l2m-Mt-8UY" secondAttribute="leadingMargin" constant="10" id="kl5-87-39E"/>
-                            <constraint firstItem="mWe-fe-DhI" firstAttribute="leading" secondItem="l2m-Mt-8UY" secondAttribute="leadingMargin" constant="10" id="nUl-4s-09t"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eP6-nk-gZK" secondAttribute="trailing" id="1kN-fG-9mN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eFj-2X-Vim" secondAttribute="trailing" id="8p4-fO-pMh"/>
+                            <constraint firstItem="eFj-2X-Vim" firstAttribute="top" secondItem="eP6-nk-gZK" secondAttribute="bottom" constant="10" id="Bk1-TQ-Tum"/>
+                            <constraint firstItem="mWe-fe-DhI" firstAttribute="leading" secondItem="l2m-Mt-8UY" secondAttribute="leadingMargin" id="E28-Cq-OJg"/>
+                            <constraint firstItem="eP6-nk-gZK" firstAttribute="top" secondItem="mWe-fe-DhI" secondAttribute="bottom" constant="10" id="Wdu-0b-ITe"/>
+                            <constraint firstItem="mWe-fe-DhI" firstAttribute="top" secondItem="dYb-Yq-S9a" secondAttribute="bottom" id="dye-VJ-YGk"/>
+                            <constraint firstItem="eFj-2X-Vim" firstAttribute="leading" secondItem="l2m-Mt-8UY" secondAttribute="leadingMargin" id="m4J-pw-Rra"/>
+                            <constraint firstItem="mWe-fe-DhI" firstAttribute="trailing" secondItem="l2m-Mt-8UY" secondAttribute="trailingMargin" id="o5f-MT-b3Q"/>
+                            <constraint firstItem="eP6-nk-gZK" firstAttribute="leading" secondItem="l2m-Mt-8UY" secondAttribute="leadingMargin" id="yte-Ek-xbb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="videoView" destination="mWe-fe-DhI" id="fif-B4-3Vy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QKD-bF-d5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,10 +11,29 @@ import YouTubePlayer_Swift
 
 class VideoViewController: UIViewController {
 
+    @IBOutlet weak var videoView: YouTubePlayerView!
+    
+    @IBAction func btnPlay(_ sender: UIButton) {
+        videoView.play()
+    }
+    
+    
+    @IBAction func btnPause(_ sender: UIButton) {
+        
+        videoView.playerVars = [
+            "playsinline": 1 as AnyObject,
+            "showinfo": 0 as AnyObject,
+            "controls": 0 as AnyObject,
+            "end": 5 as AnyObject,
+            "rel": 0 as AnyObject,
+        ]
+        videoView.loadVideoID("m9hnHaxsqGw")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Video player config
     }
 
     override func didReceiveMemoryWarning() {
