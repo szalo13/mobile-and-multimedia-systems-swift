@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'MobileAndMultimediaSystems' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for MobileAndMultimediaSystems
+  pod 'YouTubePlayer-Swift', '~> 1.0'
+
+  target 'MobileAndMultimediaSystemsTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'MobileAndMultimediaSystemsUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

@@ -1,0 +1,6 @@
+framework module Pods_MobileAndMultimediaSystemsUITests {
+  umbrella header "Pods-MobileAndMultimediaSystemsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
