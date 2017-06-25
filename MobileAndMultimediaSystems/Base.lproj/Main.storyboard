@@ -112,6 +112,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="171.5" height="30"/>
                                         <state key="normal" title="Previous"/>
                                         <connections>
+                                            <action selector="btnPrevious:" destination="NFl-bu-Jjg" eventType="touchDown" id="Ybt-qe-YIA"/>
                                             <action selector="playPreviousSong" destination="csQ-xB-fbn" eventType="touchUpInside" id="555-ut-WwN"/>
                                         </connections>
                                     </button>
@@ -119,6 +120,7 @@
                                         <rect key="frame" x="171.5" y="0.0" width="171.5" height="30"/>
                                         <state key="normal" title="Next"/>
                                         <connections>
+                                            <action selector="btnNext:" destination="NFl-bu-Jjg" eventType="touchDown" id="uZW-SB-Qru"/>
                                             <action selector="playNextSong" destination="csQ-xB-fbn" eventType="touchUpInside" id="OJR-Cl-tdt"/>
                                         </connections>
                                     </button>
@@ -176,6 +178,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QKD-bF-d5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1964" y="1343"/>
+        </scene>
+        <!--Video Collection View Controller-->
+        <scene sceneID="DjQ-oT-hM3">
+            <objects>
+                <collectionViewController id="7qV-zx-t0Y" customClass="VideoCollectionViewController" customModule="MobileAndMultimediaSystems" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="DVb-c1-zKK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5dE-dg-fIe">
+                            <size key="itemSize" width="375" height="239"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="LGN-Yi-3f2" customClass="VideoCollectionViewCell" customModule="MobileAndMultimediaSystems" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="239"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="239"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SQt-6V-AFG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="220" id="Cd2-yU-3wP"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="SQt-6V-AFG" firstAttribute="leading" secondItem="LGN-Yi-3f2" secondAttribute="leading" id="Cc8-sq-qCP"/>
+                                    <constraint firstItem="SQt-6V-AFG" firstAttribute="top" secondItem="LGN-Yi-3f2" secondAttribute="top" id="bQu-LF-Lzc"/>
+                                    <constraint firstAttribute="trailing" secondItem="SQt-6V-AFG" secondAttribute="trailing" id="dpe-iI-M7u"/>
+                                </constraints>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="7qV-zx-t0Y" id="DSU-Kq-ICm"/>
+                            <outlet property="delegate" destination="7qV-zx-t0Y" id="9Py-YW-a7Q"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kgF-83-Chv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1184.5" y="1342.5"/>
         </scene>
         <!--Music Collection View Controller-->
         <scene sceneID="6cG-3z-G49">

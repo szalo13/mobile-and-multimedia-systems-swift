@@ -30,9 +30,9 @@
 		4FA913E51EFEBC4000E72CEF /* YouTubePlayer_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA913E41EFEBC4000E72CEF /* YouTubePlayer_Swift.framework */; };
 		4FA913E61EFEBCE600E72CEF /* YouTubePlayer_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA913E41EFEBC4000E72CEF /* YouTubePlayer_Swift.framework */; };
 		4FA913E71EFEBCE600E72CEF /* YouTubePlayer_Swift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4FA913E41EFEBC4000E72CEF /* YouTubePlayer_Swift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4FA913EC1EFF0D8C00E72CEF /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA913EB1EFF0D8C00E72CEF /* VideoCollectionViewCell.swift */; };
+		4FA913EE1EFF0E7C00E72CEF /* VideoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA913ED1EFF0E7C00E72CEF /* VideoCollectionViewController.swift */; };
 		4FE78C541EAFF8F90021D068 /* 03 - Between The Lines (feat. Bajka).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FE78C531EAFF8F90021D068 /* 03 - Between The Lines (feat. Bajka).mp3 */; };
-		4FE78C5C1EAFFF040021D068 /* VideoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE78C5B1EAFFF040021D068 /* VideoCollectionViewController.swift */; };
-		4FE78C5E1EAFFF470021D068 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE78C5D1EAFFF470021D068 /* VideoCollectionViewCell.swift */; };
 		D6460359E0294286781718FA /* Pods_MobileAndMultimediaSystems.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DCA08171152996A6932A6A3 /* Pods_MobileAndMultimediaSystems.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -98,9 +98,9 @@
 		4F8770541EAE61E1003FF8FD /* IconDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconDetailViewController.swift; sourceTree = "<group>"; };
 		4F8B8A191EAF424100EBEF15 /* sample1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample1.mp3; sourceTree = "<group>"; };
 		4FA913E41EFEBC4000E72CEF /* YouTubePlayer_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouTubePlayer_Swift.framework; path = "../../../Library/Developer/Xcode/DerivedData/MobileAndMultimediaSystems-fgxbfersabkpuzckpsjskkygseev/Build/Products/Debug-iphonesimulator/YouTubePlayer-Swift/YouTubePlayer_Swift.framework"; sourceTree = "<group>"; };
+		4FA913EB1EFF0D8C00E72CEF /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
+		4FA913ED1EFF0E7C00E72CEF /* VideoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewController.swift; sourceTree = "<group>"; };
 		4FE78C531EAFF8F90021D068 /* 03 - Between The Lines (feat. Bajka).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "03 - Between The Lines (feat. Bajka).mp3"; sourceTree = "<group>"; };
-		4FE78C5B1EAFFF040021D068 /* VideoCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewController.swift; sourceTree = "<group>"; };
-		4FE78C5D1EAFFF470021D068 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
 		5C19E081027E19B50683442B /* Pods-MobileAndMultimediaSystemsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileAndMultimediaSystemsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileAndMultimediaSystemsUITests/Pods-MobileAndMultimediaSystemsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		63E31B23AD66AB15B59CBDD3 /* Pods-MobileAndMultimediaSystemsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileAndMultimediaSystemsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileAndMultimediaSystemsUITests/Pods-MobileAndMultimediaSystemsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9CF433B35FA7109D75C971B6 /* Pods-MobileAndMultimediaSystems.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileAndMultimediaSystems.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileAndMultimediaSystems/Pods-MobileAndMultimediaSystems.release.xcconfig"; sourceTree = "<group>"; };
@@ -239,9 +239,9 @@
 			isa = PBXGroup;
 			children = (
 				4F0F84811EB21D68003686C8 /* Video */,
-				4FE78C5B1EAFFF040021D068 /* VideoCollectionViewController.swift */,
-				4FE78C5D1EAFFF470021D068 /* VideoCollectionViewCell.swift */,
 				4F3A624D1EFEB5690044BDCE /* VideoViewController.swift */,
+				4FA913EB1EFF0D8C00E72CEF /* VideoCollectionViewCell.swift */,
+				4FA913ED1EFF0E7C00E72CEF /* VideoCollectionViewController.swift */,
 			);
 			name = "Video Player";
 			sourceTree = "<group>";
@@ -557,13 +557,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FE78C5E1EAFFF470021D068 /* VideoCollectionViewCell.swift in Sources */,
+				4FA913EE1EFF0E7C00E72CEF /* VideoCollectionViewController.swift in Sources */,
 				4F154F691EAF95C3009E32F3 /* MusicCollectionViewCell.swift in Sources */,
 				4F3A624E1EFEB5690044BDCE /* VideoViewController.swift in Sources */,
 				4F784E471EA786670089F1AD /* AppDelegate.swift in Sources */,
 				4F465CB71EAFE0B00042D4CD /* song.swift in Sources */,
 				4F2F64EA1EAF40C000680758 /* MusicPlayerViewController.swift in Sources */,
-				4FE78C5C1EAFFF040021D068 /* VideoCollectionViewController.swift in Sources */,
+				4FA913EC1EFF0D8C00E72CEF /* VideoCollectionViewCell.swift in Sources */,
 				4F8770511EAE552B003FF8FD /* IconCollectionViewController.swift in Sources */,
 				4F154F671EAF9556009E32F3 /* MusicCollectionViewController.swift in Sources */,
 				4F8770531EAE5657003FF8FD /* Icon.swift in Sources */,
