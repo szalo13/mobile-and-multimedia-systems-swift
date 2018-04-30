@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MusicCollectionViewController.swift"
+            timestampString = "546809875.781112"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_1A61508ED6A898A4D51E580FF717A587_func0"
+                  moduleName = "MobileAndMultimediaSystems"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Szalo/Projects/mobile-and-multimedia-systems-swift/MusicCollectionViewController.swift"
+                  timestampString = "546809875.79528"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MobileAndMultimediaSystems.(reuseIdentifier in _1A61508ED6A898A4D51E580FF717A587).unsafeMutableAddressor : Swift.String"
+                  moduleName = "MobileAndMultimediaSystems"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Szalo/Projects/mobile-and-multimedia-systems-swift/MusicCollectionViewController.swift"
+                  timestampString = "546809875.799257"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
