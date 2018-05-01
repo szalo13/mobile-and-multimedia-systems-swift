@@ -22,27 +22,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shop" translatesAutoresizingMaskIntoConstraints="NO" id="tds-aR-aNg">
-                                <rect key="frame" x="112" y="114" width="150" height="150"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Grs-LM-Lv8">
+                                <rect key="frame" x="113" y="467" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="57d-KE-C9K"/>
-                                    <constraint firstAttribute="height" constant="150" id="lfa-Ls-eSS"/>
+                                    <constraint firstAttribute="height" constant="150" id="Gu7-8F-UvE"/>
+                                    <constraint firstAttribute="width" constant="150" id="aAA-dV-IDo"/>
                                 </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="admin" translatesAutoresizingMaskIntoConstraints="NO" id="soh-4P-Oi5">
-                                <rect key="frame" x="112" y="467" width="150" height="150"/>
+                                <state key="normal" image="admin"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="NNo-Gg-f1u">
+                                <rect key="frame" x="112.5" y="114" width="150" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="ZFU-Q4-gtZ"/>
-                                    <constraint firstAttribute="height" constant="150" id="bYG-yB-jw2"/>
+                                    <constraint firstAttribute="width" constant="150" id="Nky-zo-eQi"/>
+                                    <constraint firstAttribute="height" constant="100" id="dso-Zv-RKc"/>
                                 </constraints>
-                            </imageView>
+                                <state key="normal" image="shop"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tds-aR-aNg" firstAttribute="top" secondItem="JUJ-Yq-5Jj" secondAttribute="bottom" constant="50" id="7UV-FE-AYu"/>
-                            <constraint firstItem="tds-aR-aNg" firstAttribute="centerX" secondItem="FiU-wa-K4Y" secondAttribute="centerX" id="MVf-KK-d86"/>
-                            <constraint firstItem="nu2-IV-7iA" firstAttribute="top" secondItem="soh-4P-Oi5" secondAttribute="bottom" constant="50" id="Oio-eq-Nck"/>
-                            <constraint firstItem="soh-4P-Oi5" firstAttribute="centerX" secondItem="FiU-wa-K4Y" secondAttribute="centerX" id="n19-x6-mhi"/>
+                            <constraint firstItem="NNo-Gg-f1u" firstAttribute="centerX" secondItem="FiU-wa-K4Y" secondAttribute="centerX" id="Wd5-Wi-0ya"/>
+                            <constraint firstItem="nu2-IV-7iA" firstAttribute="top" secondItem="Grs-LM-Lv8" secondAttribute="bottom" constant="50" id="aBa-St-Z27"/>
+                            <constraint firstItem="NNo-Gg-f1u" firstAttribute="top" secondItem="JUJ-Yq-5Jj" secondAttribute="bottom" constant="50" id="u4d-bn-6Pl"/>
+                            <constraint firstItem="Grs-LM-Lv8" firstAttribute="centerX" secondItem="FiU-wa-K4Y" secondAttribute="centerX" id="zay-57-sb3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jND-kt-Mp4"/>
