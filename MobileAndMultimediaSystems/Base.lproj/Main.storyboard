@@ -29,12 +29,15 @@
                                     <constraint firstAttribute="width" constant="150" id="aAA-dV-IDo"/>
                                 </constraints>
                                 <state key="normal" image="admin"/>
+                                <connections>
+                                    <segue destination="bCh-7D-yMB" kind="show" id="tRF-d1-JMo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="NNo-Gg-f1u">
-                                <rect key="frame" x="112.5" y="114" width="150" height="100"/>
+                                <rect key="frame" x="112.5" y="114" width="150" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Nky-zo-eQi"/>
-                                    <constraint firstAttribute="height" constant="100" id="dso-Zv-RKc"/>
+                                    <constraint firstAttribute="height" constant="70" id="dso-Zv-RKc"/>
                                 </constraints>
                                 <state key="normal" image="shop"/>
                             </button>
@@ -116,7 +119,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ceY-x6-0uP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1966" y="636"/>
+            <point key="canvasLocation" x="1972" y="645"/>
         </scene>
         <!--Music Player View Controller-->
         <scene sceneID="0gN-Cu-TWg">
@@ -131,7 +134,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gGW-9v-VnB">
-                                <rect key="frame" x="26" y="280" width="323" height="30"/>
+                                <rect key="frame" x="26" y="324" width="323" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJm-Xu-SVa">
                                         <rect key="frame" x="0.0" y="0.0" width="287" height="30"/>
@@ -151,14 +154,14 @@
                                 </constraints>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qq0-l9-HYM">
-                                <rect key="frame" x="88" y="60" width="200" height="200"/>
+                                <rect key="frame" x="88" y="104" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="rnH-lN-g7O"/>
                                     <constraint firstAttribute="height" constant="200" id="zB9-qA-vYd"/>
                                 </constraints>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1es-Cr-Yau">
-                                <rect key="frame" x="29" y="310" width="317" height="31"/>
+                                <rect key="frame" x="29" y="354" width="317" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="guX-Cm-VEH"/>
                                 </constraints>
@@ -168,7 +171,7 @@
                                 </connections>
                             </slider>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="T9S-RQ-lb5">
-                                <rect key="frame" x="26" y="360" width="323" height="30"/>
+                                <rect key="frame" x="26" y="404" width="323" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udr-qL-Y7Y">
                                         <rect key="frame" x="0.0" y="0.0" width="107.5" height="30"/>
@@ -197,7 +200,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gtZ-id-8n8">
-                                <rect key="frame" x="26" y="410" width="323" height="30"/>
+                                <rect key="frame" x="26" y="454" width="323" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9u-UJ-8WK">
                                         <rect key="frame" x="0.0" y="0.0" width="161.5" height="30"/>
@@ -243,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ScK-Ny-JNR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2655" y="636"/>
+            <point key="canvasLocation" x="2660" y="645"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tBV-8a-Lpy">
