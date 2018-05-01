@@ -25,17 +25,18 @@ class MusicCollectionViewController: UICollectionViewController {
         super.didReceiveMemoryWarning()
     }
 
-    
+    // Ilość sekcji gridu
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
 
-
+    // Przypisanie ilości elementów kolekcji
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return songs.count
     }
 
     
+    // Tworzenie widoku kolekcji
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MusicCollectionViewCell
     

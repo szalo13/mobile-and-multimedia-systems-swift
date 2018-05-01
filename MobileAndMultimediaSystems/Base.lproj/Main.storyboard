@@ -57,6 +57,40 @@
             <point key="canvasLocation" x="1184.8" y="-125.4872563718141"/>
         </scene>
         <!--Music Collection View Controller-->
+        <scene sceneID="7Zb-2r-TxR">
+            <objects>
+                <collectionViewController id="8TA-ae-G6p" customClass="MusicCollectionViewController" customModule="MobileAndMultimediaSystems" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4Uv-pt-iEk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6SI-17-Rr3">
+                            <size key="itemSize" width="245" height="158"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="LUI-WN-ebM">
+                                <rect key="frame" x="65" y="0.0" width="245" height="158"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="245" height="158"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="8TA-ae-G6p" id="oEH-79-0mG"/>
+                            <outlet property="delegate" destination="8TA-ae-G6p" id="qKY-2z-B3i"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="une-XP-FFV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2212" y="-137"/>
+        </scene>
+        <!--Music Collection View Controller-->
         <scene sceneID="6cG-3z-G49">
             <objects>
                 <collectionViewController id="bCh-7D-yMB" customClass="MusicCollectionViewController" customModule="MobileAndMultimediaSystems" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,7 +147,7 @@
                                 </constraints>
                                 <size key="customSize" width="375" height="270"/>
                                 <connections>
-                                    <outlet property="albumImage" destination="jLu-5w-JHy" id="bow-TU-dYQ"/>
+                                    <outlet property="albumImage" destination="jLu-5w-JHy" id="uhz-ba-vvI"/>
                                     <outlet property="titleLabel" destination="sAN-os-cwA" id="jkR-EW-mYe"/>
                                     <segue destination="csQ-xB-fbn" kind="show" identifier="showMusicPlayer" id="ukU-Ln-9OB"/>
                                 </connections>
