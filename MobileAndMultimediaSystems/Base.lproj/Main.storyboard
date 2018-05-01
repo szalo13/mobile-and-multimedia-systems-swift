@@ -177,7 +177,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="107.5" height="30"/>
                                         <state key="normal" title="Play"/>
                                         <connections>
-                                            <action selector="play:" destination="csQ-xB-fbn" eventType="touchUpInside" id="87h-Vv-55w"/>
+                                            <action selector="play:" destination="csQ-xB-fbn" eventType="touchUpInside" id="27G-K7-7VT"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huG-Jn-UEr">
@@ -238,7 +238,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="albumImage" destination="qq0-l9-HYM" id="dt3-NB-Bmy"/>
+                        <outlet property="albumImage" destination="qq0-l9-HYM" id="JnY-EA-1wc"/>
                         <outlet property="endLabel" destination="Krd-O9-tIc" id="PDf-RM-8jB"/>
                         <outlet property="slider" destination="1es-Cr-Yau" id="dmX-sZ-hAM"/>
                         <outlet property="startLabel" destination="iJm-Xu-SVa" id="ybe-1l-DEv"/>
