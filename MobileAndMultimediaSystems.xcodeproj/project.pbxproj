@@ -21,6 +21,7 @@
 		4F784E671EA786670089F1AD /* MobileAndMultimediaSystemsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F784E661EA786670089F1AD /* MobileAndMultimediaSystemsUITests.swift */; };
 		4F8B8A1A1EAF424100EBEF15 /* sample1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F8B8A191EAF424100EBEF15 /* sample1.mp3 */; };
 		4FE78C541EAFF8F90021D068 /* 03 - Between The Lines (feat. Bajka).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FE78C531EAFF8F90021D068 /* 03 - Between The Lines (feat. Bajka).mp3 */; };
+		549DC8A42098CCB00079FBED /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549DC8A32098CCB00079FBED /* MainMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		4F784E681EA786670089F1AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F8B8A191EAF424100EBEF15 /* sample1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample1.mp3; sourceTree = "<group>"; };
 		4FE78C531EAFF8F90021D068 /* 03 - Between The Lines (feat. Bajka).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "03 - Between The Lines (feat. Bajka).mp3"; sourceTree = "<group>"; };
+		549DC8A32098CCB00079FBED /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				4F154F6B1EAF9F30009E32F3 /* MP3 Player */,
 				4F784E461EA786670089F1AD /* AppDelegate.swift */,
 				4F784E4A1EA786670089F1AD /* Main.storyboard */,
+				549DC8A32098CCB00079FBED /* MainMenuViewController.swift */,
 				4F784E4D1EA786670089F1AD /* Assets.xcassets */,
 				4F784E4F1EA786670089F1AD /* LaunchScreen.storyboard */,
 				4F784E521EA786670089F1AD /* Info.plist */,
@@ -301,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				549DC8A42098CCB00079FBED /* MainMenuViewController.swift in Sources */,
 				4F154F691EAF95C3009E32F3 /* MusicCollectionViewCell.swift in Sources */,
 				4F784E471EA786670089F1AD /* AppDelegate.swift in Sources */,
 				4F465CB71EAFE0B00042D4CD /* song.swift in Sources */,

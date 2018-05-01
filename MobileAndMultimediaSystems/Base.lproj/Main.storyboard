@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main Menu View Controller-->
         <scene sceneID="aDi-vW-omU">
             <objects>
-                <viewController id="Ye1-9j-iYg" sceneMemberID="viewController">
+                <viewController id="Ye1-9j-iYg" customClass="MainMenuViewController" customModule="MobileAndMultimediaSystems" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JUJ-Yq-5Jj"/>
                         <viewControllerLayoutGuide type="bottom" id="nu2-IV-7iA"/>
@@ -30,7 +30,7 @@
                                 </constraints>
                                 <state key="normal" image="admin"/>
                                 <connections>
-                                    <segue destination="bCh-7D-yMB" kind="show" id="tRF-d1-JMo"/>
+                                    <segue destination="bCh-7D-yMB" kind="show" identifier="showAdminPanel" id="tRF-d1-JMo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="NNo-Gg-f1u">
@@ -65,29 +65,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7Jr-Ny-wef">
-                            <size key="itemSize" width="100" height="140"/>
+                            <size key="itemSize" width="375" height="270"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="bkm-0a-Pqr" customClass="MusicCollectionViewCell" customModule="MobileAndMultimediaSystems" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="140"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="140"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jLu-5w-JHy">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jLu-5w-JHy">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="100" id="L09-cq-jKx"/>
+                                                <constraint firstAttribute="height" constant="230" id="U9t-yM-pgq"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAN-os-cwA">
-                                            <rect key="frame" x="8" y="102" width="84" height="30"/>
+                                            <rect key="frame" x="8" y="232" width="359" height="30"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="30" id="JOf-ov-5sX"/>
+                                                <constraint firstAttribute="height" constant="30" id="dQV-ZU-wM2"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -98,12 +98,20 @@
                                 <constraints>
                                     <constraint firstAttribute="trailingMargin" secondItem="sAN-os-cwA" secondAttribute="trailing" id="2T6-gW-HLT"/>
                                     <constraint firstItem="jLu-5w-JHy" firstAttribute="top" secondItem="bkm-0a-Pqr" secondAttribute="top" id="3cW-XI-KuQ"/>
+                                    <constraint firstItem="sAN-os-cwA" firstAttribute="bottom" secondItem="bkm-0a-Pqr" secondAttribute="bottomMargin" id="46y-d1-3bh"/>
+                                    <constraint firstAttribute="trailing" secondItem="jLu-5w-JHy" secondAttribute="trailing" id="58P-NI-Lfs"/>
                                     <constraint firstItem="sAN-os-cwA" firstAttribute="leading" secondItem="bkm-0a-Pqr" secondAttribute="leadingMargin" id="AVX-Zc-rsp"/>
+                                    <constraint firstItem="sAN-os-cwA" firstAttribute="leading" secondItem="bkm-0a-Pqr" secondAttribute="leadingMargin" id="F3m-KW-P2v"/>
                                     <constraint firstItem="sAN-os-cwA" firstAttribute="bottom" secondItem="bkm-0a-Pqr" secondAttribute="bottomMargin" id="MEP-bA-mad"/>
+                                    <constraint firstAttribute="trailing" secondItem="jLu-5w-JHy" secondAttribute="trailing" id="dch-ct-pga"/>
+                                    <constraint firstItem="jLu-5w-JHy" firstAttribute="leading" secondItem="bkm-0a-Pqr" secondAttribute="leading" id="fgq-PX-xLE"/>
+                                    <constraint firstItem="jLu-5w-JHy" firstAttribute="top" secondItem="bkm-0a-Pqr" secondAttribute="top" id="pIw-Yu-fsc"/>
                                     <constraint firstItem="jLu-5w-JHy" firstAttribute="leading" secondItem="bkm-0a-Pqr" secondAttribute="leading" id="pPw-IG-cdf"/>
+                                    <constraint firstItem="jLu-5w-JHy" firstAttribute="leading" secondItem="bkm-0a-Pqr" secondAttribute="leading" id="tes-ek-E7L"/>
                                     <constraint firstAttribute="trailing" secondItem="jLu-5w-JHy" secondAttribute="trailing" id="ucU-a4-mbV"/>
+                                    <constraint firstItem="sAN-os-cwA" firstAttribute="trailing" secondItem="bkm-0a-Pqr" secondAttribute="trailingMargin" id="xoW-ra-agE"/>
                                 </constraints>
-                                <size key="customSize" width="100" height="140"/>
+                                <size key="customSize" width="375" height="270"/>
                                 <connections>
                                     <outlet property="albumImage" destination="jLu-5w-JHy" id="bow-TU-dYQ"/>
                                     <outlet property="titleLabel" destination="sAN-os-cwA" id="jkR-EW-mYe"/>
@@ -119,7 +127,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ceY-x6-0uP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1972" y="645"/>
+            <point key="canvasLocation" x="1972" y="644.52773613193403"/>
         </scene>
         <!--Music Player View Controller-->
         <scene sceneID="0gN-Cu-TWg">
