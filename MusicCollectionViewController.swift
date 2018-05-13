@@ -43,6 +43,12 @@ class MusicCollectionViewController: UICollectionViewController {
         // Konfiguracja komórki - ustawienie tytułu i obrazka
         cell.titleLabel.text = songs[indexPath.row].fileName
         
+        // Przekazywanie kontrollera widoku wewnątrz komórki
+        cell.controller = self
+        
+        // Przekazywanie piosenki
+        cell.song = songs[indexPath.row]
+        
         if songs[indexPath.row].artwork != nil {
             cell.albumImage.image = UIImage(data: songs[indexPath.row].artwork!)
         } else {

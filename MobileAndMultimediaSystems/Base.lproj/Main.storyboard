@@ -127,6 +127,13 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgC-lC-E8c">
+                                            <rect key="frame" x="306" y="187" width="46" height="30"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="addSong:" destination="bkm-0a-Pqr" eventType="touchUpInside" id="Ksg-6s-wgQ"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                                 <constraints>
@@ -139,6 +146,8 @@
                                     <constraint firstItem="sAN-os-cwA" firstAttribute="bottom" secondItem="bkm-0a-Pqr" secondAttribute="bottomMargin" id="MEP-bA-mad"/>
                                     <constraint firstAttribute="trailing" secondItem="jLu-5w-JHy" secondAttribute="trailing" id="dch-ct-pga"/>
                                     <constraint firstItem="jLu-5w-JHy" firstAttribute="leading" secondItem="bkm-0a-Pqr" secondAttribute="leading" id="fgq-PX-xLE"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="DgC-lC-E8c" secondAttribute="trailing" constant="15" id="fwD-7N-EA1"/>
+                                    <constraint firstItem="sAN-os-cwA" firstAttribute="top" secondItem="DgC-lC-E8c" secondAttribute="bottom" constant="15" id="mPi-NU-OG5"/>
                                     <constraint firstItem="jLu-5w-JHy" firstAttribute="top" secondItem="bkm-0a-Pqr" secondAttribute="top" id="pIw-Yu-fsc"/>
                                     <constraint firstItem="jLu-5w-JHy" firstAttribute="leading" secondItem="bkm-0a-Pqr" secondAttribute="leading" id="pPw-IG-cdf"/>
                                     <constraint firstItem="jLu-5w-JHy" firstAttribute="leading" secondItem="bkm-0a-Pqr" secondAttribute="leading" id="tes-ek-E7L"/>
@@ -147,6 +156,7 @@
                                 </constraints>
                                 <size key="customSize" width="375" height="270"/>
                                 <connections>
+                                    <outlet property="addButton" destination="DgC-lC-E8c" id="mbM-hE-ddp"/>
                                     <outlet property="albumImage" destination="jLu-5w-JHy" id="uhz-ba-vvI"/>
                                     <outlet property="titleLabel" destination="sAN-os-cwA" id="jkR-EW-mYe"/>
                                     <segue destination="csQ-xB-fbn" kind="show" identifier="showMusicPlayer" id="ukU-Ln-9OB"/>

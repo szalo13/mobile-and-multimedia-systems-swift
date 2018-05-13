@@ -9,6 +9,10 @@
 import UIKit
 import AVFoundation
 
+// Deklaracja zmiennej globalnej odpowiedzialnej za przechowywanie
+// piosenek biblioteki
+var librarySongs:[Song] = []
+
 class MainMenuViewController: UIViewController {
 
     var songs:[Song] = []
